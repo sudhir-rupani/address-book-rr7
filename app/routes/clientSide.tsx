@@ -15,7 +15,7 @@ export async function clientLoader({ params }: Route.ClientLoaderArgs) {
       "https://run.mocky.io/v3/47d491af-ad13-45fb-a81a-3ff273d08643",
     );
     const contacts = await response.json();
-    console.log("contacts", contacts);
+    console.log("clientLoader api response", contacts);
 
     //   setContacts(data);
     return { contacts };
