@@ -123,7 +123,6 @@ body {
   margin: 0;
   padding: 1rem 2rem;
   border-top: 1px solid #e3e3e3;
-  order: 1;
   line-height: 1;
 }
 
@@ -430,4 +429,51 @@ i {
   border-radius: 50%;
   animation: spin 1s infinite linear;
   margin-bottom: 1rem;
+}
+
+
+.contacts-list {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.contacts-list h1 {
+  text-align: center;
+  color: #333;
+}
+
+.contacts-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contacts-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.contacts-list li img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.contacts-list li div {
+  margin-right: 10px;
+}
+
+.contacts-list li div:last-child {
+  margin-left: auto;
+  color: #555;
+}
+.contacts-list button {
+  background-color: #176add;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;  
 }
