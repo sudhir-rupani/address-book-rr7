@@ -14,11 +14,12 @@ export async function loader({ request }: Route.LoaderArgs) {
   const url = new URL(request.url);
   const q = url.searchParams.get("q");
   const contacts = await getContacts(q);
-  return { contacts, q };
+  const envVariable = process.env.TEST_ENV_VARIABLE || "no";
+  return { contacts, q, envVariable };
 }
 
 export default function SidebarLayout({ loaderData }: Route.ComponentProps) {
-  const { contacts, q } = loaderData;
+  const { contacts, q, envVariable } = loaderData;
   const navigation = useNavigation();
   const submit = useSubmit();
   const searching =
@@ -36,6 +37,7 @@ export default function SidebarLayout({ loaderData }: Route.ComponentProps) {
     <>
       <div id="sidebar">
         <h1>
+          <div>envVariable-- {envVariable}</div>
           <Link to="about">about</Link> &nbsp; &nbsp;
           <Link to="client"> client </Link>
         
